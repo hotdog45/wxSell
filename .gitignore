@@ -27,4 +27,4 @@
 /logs/*
 
 
-*/application-prod.yml
+*application-prod.yml
