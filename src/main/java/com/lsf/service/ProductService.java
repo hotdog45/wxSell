@@ -1,6 +1,9 @@
 package com.lsf.service;
 
+import com.lsf.dataObject.OrderDetail;
 import com.lsf.dataObject.ProductInfo;
+import com.lsf.dto.CartDTO;
+import com.lsf.dto.OrderDTO;
 import org.springframework.data.domain.Page;
 
 import org.springframework.data.domain.Pageable;
@@ -26,8 +29,12 @@ public interface ProductService {
     /**
      * 加库存
      */
+    void increaseStock(List<CartDTO> cartDTOList);
+
 
     /**
      * 减库存
      */
+    void decreaseStock(List<CartDTO> cartDTOList);
+
 }

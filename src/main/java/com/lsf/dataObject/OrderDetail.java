@@ -41,7 +41,7 @@ public class OrderDetail {
     /**
      * 数量
      */
-    private String productQuantity;
+    private Integer productQuantity;
 
 
     /**

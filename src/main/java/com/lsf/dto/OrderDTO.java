@@ -1,10 +1,10 @@
-package com.lsf.dataObject;
+package com.lsf.dto;
 
+import com.lsf.dataObject.OrderDetail;
 import com.lsf.enums.OrderStatusEnum;
 import com.lsf.enums.PayStatusEnum;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.data.annotation.Transient;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,10 +15,8 @@ import java.util.List;
 /**
  * Created by lishunfeng on 2018/8/8.
  */
-@Entity
 @Data
-@DynamicUpdate
-public class OrderMaster {
+public class OrderDTO {
 
     /**
      * 订单id
@@ -54,13 +52,13 @@ public class OrderMaster {
     /**
      * 订单状态, 默认为新下单.
      */
-    private  Integer orderStatus = OrderStatusEnum.NEW.getCode();
+    private  Integer orderStatus ;
 
 
     /**
      * 支付状态,
      */
-    private  Integer payStatus = PayStatusEnum.WAIT.getCode();
+    private  Integer payStatus;
 
     /**
      * 创建时间
@@ -72,7 +70,6 @@ public class OrderMaster {
      */
     private Date updateTime;
 
-//    @Transient
-//    private List<OrderDetail> orderDetailList;
+    private List<OrderDetail> orderDetailList;
 
 }
