@@ -1,4 +1,6 @@
 spring:
   profiles:
     active: prod
+  jackson:
+    default-property-inclusion: non_null #为null  不返回字段
 

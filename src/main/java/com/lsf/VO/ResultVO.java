@@ -16,7 +16,7 @@ public class ResultVO<T> {
     /**
      * 提示信息
      */
-    private String msg;
+    private String msg = "";
     /**
      * 数据
      */

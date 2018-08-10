@@ -1,8 +1,11 @@
 package com.lsf.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.lsf.dataObject.OrderDetail;
 import com.lsf.enums.OrderStatusEnum;
 import com.lsf.enums.PayStatusEnum;
+import com.lsf.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -16,6 +19,8 @@ import java.util.List;
  * Created by lishunfeng on 2018/8/8.
  */
 @Data
+//不返回空
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderDTO {
 
     /**
@@ -63,11 +68,13 @@ public class OrderDTO {
     /**
      * 创建时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     private List<OrderDetail> orderDetailList;
