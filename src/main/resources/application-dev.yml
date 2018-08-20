@@ -3,10 +3,23 @@ server:
   context-path: /sell
 spring:
   datasource:
-        driver-class-name: org.gjt.mm.mysql.Driver
-        username: root
-        url: jdbc:mysql://localhost:3306/dbgirl?useUnicode=true&characterEncoding=utf-8
-        password: 123456
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/dbgirl
+    #url: jdbc:mysql://192.168.2.70/:3306/sell
+
+    username: root
+    password: 123456
   jpa:
       show-sql: true
       database: MYSQL
+
+
+
+
+#wechat:
+#  mpAppId:ww
+#  mpAppSecret:
+#  mchId:
+#  mchKey:
+#  keyPath:
+#  notifyUrl:

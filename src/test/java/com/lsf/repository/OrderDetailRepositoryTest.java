@@ -27,10 +27,10 @@ public class OrderDetailRepositoryTest {
     @Test
     public void saveTest(){
         OrderDetail orderDetail = new OrderDetail();
-        orderDetail.setDetailId("12w2");
+        orderDetail.setDetailId("12w222");
         orderDetail.setProductIcon("http:www.aa.com");
-        orderDetail.setProductId("1122w211");
-        orderDetail.setOrderId("111221");
+        orderDetail.setProductId("11w211");
+        orderDetail.setOrderId("1112321");
         orderDetail.setProductPrice(new BigDecimal(75.33));
         orderDetail.setProductName("你猜2猜");
         orderDetail.setProductQuantity(423);
