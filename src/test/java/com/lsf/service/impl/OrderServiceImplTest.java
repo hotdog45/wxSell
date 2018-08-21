@@ -104,4 +104,11 @@ public class OrderServiceImplTest {
 
     }
 
+    @Test
+    public void list() throws Exception {
+        PageRequest request = new PageRequest(0,2);
+        Page<OrderDTO> orderDTOPage = orderService.findList(request);
+        Assert.assertNotEquals(0,orderDTOPage.getTotalElements());
+        Assert.assertTrue("查询订单",orderDTOPage.getTotalElements() >0);
+    }
 }
