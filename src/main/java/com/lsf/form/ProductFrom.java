@@ -1,22 +1,20 @@
-package com.lsf.dataObject;
+package com.lsf.form;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.lsf.enums.ProductStatusEnum;
 import com.lsf.utils.EnumUtil;
 import lombok.Data;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
 /**
- * Created by lishunfeng on 2018/8/8.
+ * Created by lishunfeng on 2018/8/24.
  */
-@Entity
 @Data
-public class ProductInfo {
+public class ProductFrom {
 
-    @Id
+
     private String productId;
 
     /**
@@ -28,8 +26,6 @@ public class ProductInfo {
      * 单价
      */
     private BigDecimal productPrice;
-
-
     /**
      * 库存
      */
@@ -47,19 +43,8 @@ public class ProductInfo {
     private String productIcon;
 
     /**
-     *
-     * 状态 0正常1下架
-     */
-    private Integer productStatus = ProductStatusEnum.UP.getCode();
-
-    /**
      * 类目编号
      */
     private Integer categoryType;
-
-    @JsonIgnore
-    public ProductStatusEnum getProductStatusEnum() {
-        return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
-    }
 
 }

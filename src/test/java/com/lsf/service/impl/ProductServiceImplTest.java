@@ -58,7 +58,7 @@ public class ProductServiceImplTest {
         productInfo.setProductStock(990);
         productInfo.setProductDescription("棒棒棒那个的");
         productInfo.setProductIcon("http://xxx33x.com");
-        productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
+//        productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
         productInfo.setCategoryType(8);
         ProductInfo result =  productService.save(productInfo);
         Assert.assertNotNull(result);
