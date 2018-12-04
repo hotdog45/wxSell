@@ -1,14 +1,17 @@
 server:
-  port: 8000
-#  context-path: /sell
+  port: 8003
+
+  context-path: /sell
 spring:
   datasource:
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://localhost:3306/dbgirl?useUnicode=true&characterEncoding=utf-8
-    #url: jdbc:mysql://192.168.2.70/:3306/sell
+#    url: jdbc:mysql://localhost:3306/dbgirl?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: 123456
 
+    url: jdbc:mysql://39.106.166.176:3306/wxSell?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: 123456
+    password: qq123456
   jpa:
       show-sql: true
       database: MYSQL

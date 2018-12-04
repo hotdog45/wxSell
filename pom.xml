@@ -70,12 +70,30 @@
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 
+
+		<!--&lt;!&ndash; swagger2 核心依赖 &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger2</artifactId>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; swagger-ui 为项目提供api展示及测试的界面 &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger-ui</artifactId>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash; 集成 swagger 的时候，缺少这个 jar包是不OK的&ndash;&gt;-->
+		<!--<dependency>-->
+		<!--<groupId>com.fasterxml.jackson.core</groupId>-->
+		<!--<artifactId>jackson-databind</artifactId>-->
+		<!--</dependency>-->
+
 	</dependencies>
 
 
 
 
 	<build>
+		<finalName>sell</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

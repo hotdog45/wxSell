@@ -17,13 +17,17 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+
+
 /**
  * Created by lishunfeng on 2018/8/8.
  */
 @Data
+
+
 //不返回空
 //@JsonInclude(JsonInclude.Include.NON_NULL)
-public class OrderDTO {
+public class  OrderDTO {
 
     /**
      * 订单id
