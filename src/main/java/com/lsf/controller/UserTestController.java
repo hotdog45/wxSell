@@ -11,6 +11,8 @@ import com.lsf.service.BuyerService;
 import com.lsf.service.OrderService;
 import com.lsf.service.UserTestService;
 import com.lsf.utils.ResultVOUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
@@ -24,6 +26,7 @@ import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
+@Api(tags = "用户接口")
 @RestController
 @RequestMapping("/user")
 @Slf4j
@@ -34,6 +37,7 @@ public class UserTestController {
 
 
     //创建订单@Valid UserTest userTest,
+    @ApiOperation(value = "查询字段")
     @PostMapping("/create")
     public ResultVO<Map<String,String>> create(@RequestBody UserTest userTest2) {
         UserTest result = userTestService.save(userTest2);

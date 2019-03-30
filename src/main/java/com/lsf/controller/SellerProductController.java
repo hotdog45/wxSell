@@ -12,6 +12,7 @@ import com.lsf.service.CategoryService;
 import com.lsf.service.OrderService;
 import com.lsf.service.ProductService;
 import com.lsf.utils.KeyUtil;
+import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ import java.util.Map;
 /**
  * Created by lishunfeng on 2018/8/20.
  */
-
+@Api(tags = "订单中心")
 @Controller
 @RequestMapping("/seller/product")
 @Slf4j
@@ -53,6 +54,11 @@ public class SellerProductController {
      * @param size
      * @return
      */
+    @ApiOperation(value = "订单列表",notes = "查询订单列表")
+    @ApiImplicitParams({@ApiImplicitParam(name = "page", value = "分页", required = false,dataType = "Integer",allowMultiple = false),
+            @ApiImplicitParam(name = "size", value = "数量", required = false)}
+    )
+
     @GetMapping("/list")
     public ModelAndView list(@RequestParam(value = "page", defaultValue = "1") Integer page,
                              @RequestParam(value = "size", defaultValue = "3") Integer size,
