@@ -28,3 +28,5 @@
 
 
 *application-prod.yml
+*application-dev.yml
+*.yml
